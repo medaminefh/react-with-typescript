@@ -5,7 +5,7 @@ import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App name={"Med Amine Fh"} />
+    <App children={()=>""} />
   </React.StrictMode>,
   document.getElementById('root')
 );
