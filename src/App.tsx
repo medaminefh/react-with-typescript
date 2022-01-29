@@ -4,6 +4,8 @@ import Lists from "./components/lists/Lists"
 import Status from "./components/status/Status"
 import Button from "./components/button/button"
 import Form from "./components/input/input"
+import Modal from "./components/modal/Modal"
+import Styles from "./components/styles/Styles"
 
 type AppProps = {
   children:React.ReactNode
@@ -31,6 +33,8 @@ const App = (props:AppProps) =>{
   ]
   return (
     <div>
+      <Modal />
+      <Styles styles={{backgroundColor:"#524",padding:"20px",margin:"10px",color:"#eee"}} />
       <Status status={"error"} />
       <Greet name={"medaminefh"} isLoggedIn={true} message={"Hello world"} />
       <Lists names = {nameList} />
