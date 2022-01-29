@@ -6,6 +6,8 @@ import Button from "./components/button/button"
 import Form from "./components/input/input"
 import Modal from "./components/modal/Modal"
 import Styles from "./components/styles/Styles"
+import State from "./components/state/State"
+import User from "./components/state/User"
 
 type AppProps = {
   children:React.ReactNode
@@ -42,6 +44,8 @@ const App = (props:AppProps) =>{
       <Form handleChange={(e) => console.log("this is from the change event",e)} handleSubmit={(e)=> e.preventDefault()}>
         <Button handleClick={() => console.log("YAy")} />
       </Form>
+      <State />
+      <User />
     </div>
   );
 }
