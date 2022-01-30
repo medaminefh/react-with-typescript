@@ -8,6 +8,7 @@ import Modal from "./components/modal/Modal"
 import Styles from "./components/styles/Styles"
 import State from "./components/state/State"
 import User from "./components/state/User"
+import Reducer from "./components/useReducer/UseReducer"
 
 type AppProps = {
   children:React.ReactNode
@@ -46,6 +47,7 @@ const App = (props:AppProps) =>{
       </Form>
       <State />
       <User />
+      <Reducer />
     </div>
   );
 }
