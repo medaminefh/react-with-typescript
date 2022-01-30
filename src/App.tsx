@@ -9,6 +9,8 @@ import Styles from "./components/styles/Styles"
 import State from "./components/state/State"
 import User from "./components/state/User"
 import Reducer from "./components/useReducer/UseReducer"
+import {ThemeContextProvider} from "./components/context/UseContext"
+import {Box} from "./components/context/Box"
 
 type AppProps = {
   children:React.ReactNode
@@ -48,6 +50,9 @@ const App = (props:AppProps) =>{
       <State />
       <User />
       <Reducer />
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }
