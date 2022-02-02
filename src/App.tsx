@@ -12,6 +12,11 @@ import Reducer from "./components/useReducer/UseReducer";
 import { ThemeContextProvider } from "./components/context/UseContext";
 import { UserContextProvider } from "./components/context/AdvancedContext";
 import { Box, Box2 } from "./components/context/Box";
+import InputElement from "./components/ref/UseRef";
+import {
+  Profile,
+  ComponentType,
+} from "./components/reactComponentType/ComponentType";
 
 type AppProps = {
   children: React.ReactNode;
@@ -70,6 +75,10 @@ const App = (props: AppProps) => {
       <UserContextProvider>
         <Box2 />
       </UserContextProvider>
+
+      <InputElement />
+
+      <ComponentType isLoggedIn={false} component={Profile} />
     </div>
   );
 };
