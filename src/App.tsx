@@ -13,6 +13,7 @@ import { ThemeContextProvider } from "./components/context/UseContext";
 import { UserContextProvider } from "./components/context/AdvancedContext";
 import { Box, Box2 } from "./components/context/Box";
 import InputElement from "./components/ref/UseRef";
+import RestrictedProps from "./components/restriction_props/Restriction_Props";
 import {
   Profile,
   ComponentType,
@@ -79,6 +80,8 @@ const App = (props: AppProps) => {
       <InputElement />
 
       <ComponentType isLoggedIn={false} component={Profile} />
+
+      <RestrictedProps value={5} isPositive />
     </div>
   );
 };
