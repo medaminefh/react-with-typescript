@@ -2,7 +2,7 @@ import React from "react";
 import Greet from "./components/greet/Greet";
 import Lists from "./components/lists/Lists";
 import Status from "./components/status/Status";
-import Button from "./components/button/button";
+import { Button, CustomBtn } from "./components/button/button";
 import Form from "./components/input/input";
 import Modal from "./components/modal/Modal";
 import Styles from "./components/styles/Styles";
@@ -18,6 +18,7 @@ import {
   Profile,
   ComponentType,
 } from "./components/reactComponentType/ComponentType";
+import TestingOmit from "./components/omit/Omit";
 
 type AppProps = {
   children: React.ReactNode;
@@ -82,6 +83,14 @@ const App = (props: AppProps) => {
       <ComponentType isLoggedIn={false} component={Profile} />
 
       <RestrictedProps value={5} isPositive />
+      <CustomBtn
+        variant="hello"
+        disabled
+        onClick={() => console.log("Hello world")}
+      >
+        This a Custom Btn
+      </CustomBtn>
+      <TestingOmit value={"anyway"}>Yay</TestingOmit>
     </div>
   );
 };
